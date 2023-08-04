@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,900;1,500;1,600;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+}
+body {
+  background-color: #252954;
+}
+.main {
+  padding: 0 88px;
+  position: relative;
+  overflow: hidden;
+  background-color: #221f2f;
+}
+.main:before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  width: 120px;
+  height: 120px;
+  background-color: #ed2ff0;
+  filter: blur(90px);
+}
+.main:after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  background-color: #22a8cd;
+  filter: blur(90px);
+}
+.main .navbar {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 32px;
+}
+.nav-buttons .nav-btn {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: #ccc;
+}
+.nav-buttons .nav-btn.selected {
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.main .nav-buttons.active {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.navbar .nav-links {
+  display: flex;
+}
+.navbar .nav-links .item {
+  font-size: 13px;
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar .nav-links .item.selected {
+  background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid #7e22ce;
+}
+.navbar .nav-links .item:not(:last-child) {
+  margin-right: 20px;
+}
+.toggler {
+  color: #c5c3c3;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+
+.main .top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+.main .top-container .info-box {
+  animation: toRight 0.8s;
+}
+.main .top-container .info-box .header {
+  margin: 0;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 55px;
+}
+.main .top-container .info-box .info-text {
+  margin: 20px 0 32px;
+  font-size: 16px;
+  color: white;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+.main .top-container .info-buttons {
+  display: flex;
+}
+.main .top-container .info-buttons .info-btn {
+  padding: 8px 38px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 16px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  color: white;
+}
+.main .top-container .info-buttons .info-btn.nav-btn {
+  background-color: transparent;
+  margin-left: 20px;
+  border: 1px solid #fff;
+}
+.main .top-container .info-buttons .info-btn.selected {
+  background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+  border: none;
+}
+.main .top-container .nft-box {
+  padding: 16px;
+  border: 1px solid #000;
+  background: linear-gradient(
+    170deg,
+    rgba(52, 93, 129, 0) 1.85%,
+    rgba(57, 46, 75, 0) 98%
+  );
+  border-radius: 2rem;
+  animation: toLeft 0.8s;
+}
+.main .top-container .nft-box .nft-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.main .top-container .nft-box .nft-content .info {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+}
+.main .top-container .nft-box .nft-content .info .info-img {
+  object-fit: cover;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.main .top-container .nft-box .nft-content .like {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+}
+.main .top-container .nft-box .nft-content .like .icon-box {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.main .top-container .nft-box .nft-content .like .icon-box .bx {
+  font-size: 30px;
+  margin-right: 8px;
+}
+.main .top-container .nft-picture {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 1.5rem;
+}
+.main .get-started {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.main .get-started .header {
+  align-self: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+}
+.main .get-started .info-text {
+  align-self: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+}
+
+.main .get-started .items-box .item-container p {
+  color: #fff;
+  width: 100px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+}
+.main .get-started .items-box .item-container .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2.6rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(90px);
+}
+.main .get-started .items-box .item-container .item .bx {
+  font-size: 38px;
+  color: #eee;
+}
+.main .footer {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .footer .footer-header {
+  max-width: 50%;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+.main .footer .footer-links {
+  display: flex;
+}
+.main .footer .footer-links .link h5 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+}
+.main .footer .footer-links .link p {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: #ccc;
+}
+.main .copyright {
+  padding-bottom: 25px;
+  border-top: 1px solid #ccc;
+}
+.main .copyright p {
+  font-size: 12px;
+  line-height: 36px;
+  color: #afafaf;
+}
+@media screen and (max-width: 1040px) {
+  .top-container {
+    flex-direction: column;
+  }
+  .top-container .info-box {
+    margin: 60px 0;
+    max-width: none;
+  }
+  .top-container .nft-box {
+    display: none;
+  }
+  .main .footer {
+    flex-direction: column;
+  }
+  .main .footer .footer-header {
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 80%;
+  }
+  .main .footer .footer-links .link:first-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 925px) {
+  .navbar .nav-links {
+    display: none;
+  }
+  .nav-buttons {
+    opacity: 0;
+  }
+  .navbar .toggler {
+    display: flex !important;
+    align-items: center;
+  }
+  .get-started .info-text {
+    text-align: center;
+  }
+  .get-started .items-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    gap: 30px;
+  }
+  .main .get-started .items-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+    filter: blur(120px);
+  }
+}
+@media screen and (min-width: 925px) {
+  .get-started .items-box {
+    position: relative;
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+    justify-content: space-around;
+  }
+  .main .get-started .items-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    top: 80px;
+    background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+    filter: blur(140px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .top-container {
+    margin-top: 4rem !important;
+  }
+  .top-container .nft-box {
+    display: block;
+    max-width: none;
+    max-height: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 40px;
+  }
+  .footer .footer-header {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer .footer-links {
+    justify-content: space-around;
+  }
+  .footer .footer-links .link {
+    margin-left: 30px;
+  }
+  .footer .footer-links .link h5 {
+    font-size: 15px;
+    line-height: 35px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main .footer .footer-links .link {
+    margin-left: 70px;
+  }
+}
+@keyframes toRight {
+  from {
+    transform: translateX(550px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes toLeft {
+  from {
+    transform: translateX(550px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
